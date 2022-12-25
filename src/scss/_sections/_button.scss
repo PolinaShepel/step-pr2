@@ -1,0 +1,146 @@
+.menu-button__stick_small {
+  position: absolute;
+  background-color: white;
+  height: 3px;
+  width: 15px;
+  border-radius: 5px;
+  top: 3px;
+  left: auto;
+  animation-fill-mode: forwards;
+}
+
+.menu-button__stick_third {
+  position: absolute;
+  background-color: white;
+  height: 3px;
+  width: 26px;
+  border-radius: 5px;
+  left: -10px;
+  top: auto;
+  animation-fill-mode: forwards;
+}
+
+.menu-button__stick {
+  position: absolute;
+  background-color: white;
+  height: 3px;
+  width: 26px;
+  border-radius: 5px;
+  top: 23px;
+  left: -10px;
+  animation-fill-mode: forwards;
+}
+
+.animation1 {
+  @include keyframes(animation1) {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @include animate(animation1, 0s, linear, 1);
+  animation-fill-mode: forwards;
+}
+
+.animation2 {
+  @include keyframes(animation2) {
+    50% {
+      top: 50%;
+    }
+    75% {
+      top: 50%;
+      transform: rotate(0);
+    }
+    100% {
+      top: 50%;
+      transform: rotate(47deg);
+    }
+  }
+  @include animate(animation2, 0.4s, linear, 1);
+  animation-fill-mode: forwards;
+}
+
+.animation3 {
+  @include keyframes(animation3) {
+    50% {
+      top: 50%;
+    }
+    75% {
+      top: 50%;
+      transform: rotate(0);
+    }
+    100% {
+      top: 50%;
+      transform: rotate(-47deg);
+    }
+  }
+  @include animate(animation3, 0.4s, linear, 1);
+  animation-fill-mode: forwards;
+}
+
+.animation1_reverse {
+  @include keyframes(animation1_reverse) {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @include animate(animation1_reverse, 0.5s, linear, 1);
+  animation-fill-mode: forwards;
+}
+
+.animation2_reverse {
+  @include keyframes(animation2_reverse) {
+    0% {
+      top: 50%;
+      transform: rotate(47deg);
+    }
+    50% {
+      top: 50%;
+      transform: rotate(0);
+    }
+    100% {
+      top: auto;
+    }
+  }
+  @include animate(animation2_reverse, 0.4s, linear, 1);
+  animation-fill-mode: forwards;
+}
+
+.animation3_reverse {
+  @include keyframes(animation3_reverse) {
+    0% {
+      top: 50%;
+      transform: rotate(-47deg);
+    }
+    50% {
+      top: 50%;
+      transform: rotate(0);
+    }
+    75% {
+      top: 20px;
+    }
+    100% {
+      top: 23px;
+    }
+  }
+  @include animate(animation3_reverse, 0.4s, linear, 1);
+  animation-fill-mode: forwards;
+}
+
+.menu_open {
+  height: 312px;
+  transition-duration: 1s;
+  visibility: visible;
+  opacity: 1;
+}
